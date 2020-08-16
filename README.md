@@ -9,34 +9,16 @@ and [screenshots scripts](#screenshots-tools)
 ## docker tags
 
 - `latest`
-- `1`
-- `1.1.1`
-- `1.1.0`
-- `1.0.0`
-- `0`
-- `0.13.0`
-- `0.12.0`
-- `0.11.0`
-- `0.10.2`
-- `0.10.1`
-- `0.10.0`
-- `0.9.0`
 
 ## install
 
 ```
 docker pull pleasemarkdarkly/puppeteer:latest
-# OR
-docker pull pleasemarkdarkly/puppeteer:1.0.0
-# OR
-docker pull pleasemarkdarkly/puppeteer:1
-
 ```
 
 ## before usage
 
-
-1. you should pass `--no-sandbox, --disable-setuid-sandbox` args when launch browser
+1. You should pass `--no-sandbox, --disable-setuid-sandbox` args when launching a browser
 
 ```js
 const puppeteer = require('puppeteer');
@@ -59,7 +41,7 @@ const puppeteer = require('puppeteer');
 })();
 ```
 
-2. if you got page crash with `BUS_ADRERR` ([chromium issue](https://bugs.chromium.org/p/chromium/issues/detail?id=571394)), increase shm-size on docker run with `--shm-size` argument
+2. If you see a page crash with `BUS_ADRERR` ([chromium issue](https://bugs.chromium.org/p/chromium/issues/detail?id=571394)), increase shm-size on docker run with `--shm-size` argument
 
 ```bash
 docker run --shm-size 1G --rm -v <path_to_script>:/app/index.js pleasemarkdarkly/puppeteer:latest
@@ -87,7 +69,6 @@ const puppeteer = require('puppeteer');
 
 
 ```
-
 
 ## usage
 
